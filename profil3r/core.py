@@ -3,7 +3,6 @@ from itertools import chain, combinations, permutations
 import json
 from profil3r.modules.email import email
 from profil3r.modules.social import facebook, twitter, tiktok, instagram
-from profil3r.modules.porn import onlyfans
 from profil3r.colors import Colors
 import threading
 import json
@@ -24,8 +23,7 @@ class Core:
             {"name": "facebook" , "method" : self.facebook},
             {"name": "twitter"  , "method" : self.twitter},
             {"name": "tiktok"   , "method" : self.tiktok},
-            {"name": "instagram", "method" : self.instagram},
-            {"name": "onlyfans" , "method" : self.onlyfans}
+            {"name": "instagram", "method" : self.instagram}
         ]
 
     def config():
@@ -71,12 +69,6 @@ class Core:
         result["instagram"] = instagram.Instagram(self.CONFIG, self.permutations_list).search()
         # print results
         self.print_results("instagram")
-
-    # Onlyfans
-    def onlyfans(self):
-        result["onlyfans"] = onlyfans.Onlyfans(self.CONFIG, self.permutations_list).search()
-        # print results
-        self.print_results("onlyfans")
 
     def print_results(self, element):
         if element in result:
@@ -128,6 +120,8 @@ class Core:
                 json.dump(result, fp)
         except Exception as e:
             print(e)
+
+        print("\n" + Colors.BOLD + "[+] " + Colors.ENDC + "Report was generated in {}".format(file_name))
 
     def run(self):
         for module in self.modules:

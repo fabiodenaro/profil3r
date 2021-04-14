@@ -26,9 +26,6 @@ python3 setup.py install
 - [x] Twitter
 - [x] Tiktok
 
-#### Porn
-- [x] Onlyfans
-
 ## Report 📖
 
 A report in JSON format is automatically generated in the `reports` folder
@@ -36,7 +33,7 @@ A report in JSON format is automatically generated in the `reports` folder
 ## 📚 Example
 
 ```bash
-python3 profil3r john doe
+python3 profil3r.py john doe
 ```
 
 ## 📝 License
