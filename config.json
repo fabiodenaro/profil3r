@@ -31,9 +31,9 @@
             "format": "https://instagram.com/{permutation}"
         },
 
-        "onlyfans": {
+        "soundcloud": {
             "rate_limit": 1000,
-            "format": "https://onlyfans.com/{permutation}"
+            "format": "https://soundcloud.com/{permutation}"
         }
     }
 }

@@ -26,6 +26,10 @@ python3 setup.py install
 - [x] Twitter
 - [x] Tiktok
 
+#### Music
+
+- [x] Soundcloud
+
 ## Report 📖
 
 A report in JSON format is automatically generated in the `reports` folder

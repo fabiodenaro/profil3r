@@ -3,6 +3,7 @@ from itertools import chain, combinations, permutations
 import json
 from profil3r.modules.email import email
 from profil3r.modules.social import facebook, twitter, tiktok, instagram
+from profil3r.modules.music import soundcloud
 from profil3r.colors import Colors
 import threading
 import json
@@ -19,11 +20,12 @@ class Core:
         self.items = items
         self.permutations_list = []
         self.modules = [
-            {"name": "email"    , "method" : self.email},
-            {"name": "facebook" , "method" : self.facebook},
-            {"name": "twitter"  , "method" : self.twitter},
-            {"name": "tiktok"   , "method" : self.tiktok},
-            {"name": "instagram", "method" : self.instagram}
+            {"name": "email"     , "method" : self.email},
+            {"name": "facebook"  , "method" : self.facebook},
+            {"name": "twitter"   , "method" : self.twitter},
+            {"name": "tiktok"    , "method" : self.tiktok},
+            {"name": "instagram" , "method" : self.instagram},
+            {"name": "soundcloud", "method" : self.soundcloud}
         ]
 
     def config():
@@ -69,6 +71,12 @@ class Core:
         result["instagram"] = instagram.Instagram(self.CONFIG, self.permutations_list).search()
         # print results
         self.print_results("instagram")
+    
+    # Soundcloud
+    def soundcloud(self):
+        result["soundcloud"] = soundcloud.Soundcloud(self.CONFIG, self.permutations_list).search()
+        # print results
+        self.print_results("soundcloud")
 
     def print_results(self, element):
         if element in result:
