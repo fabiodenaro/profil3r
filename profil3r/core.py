@@ -4,6 +4,7 @@ import json
 from profil3r.modules.email import email
 from profil3r.modules.social import facebook, twitter, tiktok, instagram
 from profil3r.modules.music import soundcloud
+from profil3r.modules.programming import github
 from profil3r.colors import Colors
 import threading
 import json
@@ -25,7 +26,8 @@ class Core:
             "twitter":    {"method" : self.twitter},
             "tiktok":     {"method" : self.tiktok},
             "instagram":  {"method" : self.instagram},
-            "soundcloud": {"method" : self.soundcloud}
+            "soundcloud": {"method" : self.soundcloud},
+            "github":     {"method" : self.github},
         }
 
     # Remove modules that do not exist
@@ -78,6 +80,12 @@ class Core:
         result["soundcloud"] = soundcloud.Soundcloud(self.CONFIG, self.permutations_list).search()
         # print results
         self.print_results("soundcloud")
+
+    # Github
+    def github(self):
+        result["github"] = github.Github(self.CONFIG, self.permutations_list).search()
+        # print results
+        self.print_results("github")
 
     def print_results(self, element):
         if element in result:

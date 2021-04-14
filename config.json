@@ -37,6 +37,11 @@
         "soundcloud": {
             "rate_limit": 1000,
             "format": "https://soundcloud.com/{permutation}"
+        },
+
+        "github": {
+            "rate_limit": 1000,
+            "format": "https://github.com/{permutation}"
         }
     }
 }

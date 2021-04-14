@@ -30,6 +30,10 @@ python3 setup.py install
 
 - [x] Soundcloud
 
+#### Programming
+
+- [x] Github
+
 ## Report 📖
 
 A report in JSON format is automatically generated in the `reports` folder
@@ -43,3 +47,7 @@ python3 profil3r.py john doe
 ## 📝 License
 
 This project is under the MIT license.
+
+## Contact 
+
+You can contact me at r0g3r5@protonmail.com or on twitter [@Rog3rSm1th](https://twitter.com/Rog3rSm1th)
