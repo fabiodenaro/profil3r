@@ -1,5 +1,8 @@
 {   
+    "report_elements" : ["email", "facebook", "twitter"],
+
     "report_path": "./reports/{}.json",
+    
     "plateform": {
         "email": {
             "rate_limit": 1500,

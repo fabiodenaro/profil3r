@@ -7,12 +7,12 @@ class Soundcloud:
     def __init__(self, config, permutations_list):
         # 1000 ms
         self.delay = config['plateform']['soundcloud']['rate_limit'] / 1000
-        # https://facebook.com/{username}
+        # https://soundcloud.com/{username}
         self.format = config['plateform']['soundcloud']['format']
         # soundcloud usernames are not case sensitive
         self.permutations_list = [perm.lower() for perm in permutations_list]
 
-    # Generate all potential facebook usernames
+    # Generate all potential soundcloud usernames
     def possible_usernames(self):
         possible_usernames = []
 

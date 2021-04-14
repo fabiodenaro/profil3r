@@ -19,17 +19,18 @@ class Core:
         # Items passed from the command line
         self.items = items
         self.permutations_list = []
-        self.modules = [
-            {"name": "email"     , "method" : self.email},
-            {"name": "facebook"  , "method" : self.facebook},
-            {"name": "twitter"   , "method" : self.twitter},
-            {"name": "tiktok"    , "method" : self.tiktok},
-            {"name": "instagram" , "method" : self.instagram},
-            {"name": "soundcloud", "method" : self.soundcloud}
-        ]
+        self.modules = {
+            "email":      {"method" : self.email },
+            "facebook":   {"method" : self.facebook},
+            "twitter":    {"method" : self.twitter},
+            "tiktok":     {"method" : self.tiktok},
+            "instagram":  {"method" : self.instagram},
+            "soundcloud": {"method" : self.soundcloud}
+        }
 
-    def config():
-        return self.CONFIG
+    # Remove modules that do not exist
+    def get_report_modules(self):
+        return list( set(self.CONFIG["report_elements"]) & set(list(self.CONFIG["plateform"].keys())) )
 
     # return all possible permutation for a username
     # exemple : ["john", "doe"] -> ("john", "doe", "johndoe", "doejohn", "john.doe", "doe.john") 
@@ -132,8 +133,12 @@ class Core:
         print("\n" + Colors.BOLD + "[+] " + Colors.ENDC + "Report was generated in {}".format(file_name))
 
     def run(self):
-        for module in self.modules:
-            thread = threading.Thread(target=module["method"])
+        modules = self.get_report_modules()
+
+        print("\n" + Colors.BOLD + "[+] " + Colors.ENDC + "Profil3r will search : \n - {} \nyou can add more services in the config.json file\n".format('\n - '.join(modules)))
+
+        for module in modules:
+            thread = threading.Thread(target=self.modules[module]["method"])
             thread.start()
             thread.join()
         self.generate_report()
