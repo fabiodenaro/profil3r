@@ -134,7 +134,7 @@ class Core:
         file_name = self.CONFIG["report_path"].format("_".join(self.items[:-1]))
         try:
             with open(file_name, 'w') as fp:
-                json.dump(result, fp)
+                json.dump(result, fp, indent=2)
         except Exception as e:
             print(e)
 
