@@ -42,6 +42,11 @@
         "github": {
             "rate_limit": 1000,
             "format": "https://github.com/{permutation}"
+        },
+
+        "0x00sec": {
+            "rate_limit": 1000,
+            "format": "https://0x00sec.org/u/{permutation}"
         }
     }
 }

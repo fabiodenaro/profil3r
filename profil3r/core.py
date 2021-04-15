@@ -4,6 +4,7 @@ import json
 from profil3r.modules.email import email
 from profil3r.modules.social import facebook, twitter, tiktok, instagram
 from profil3r.modules.music import soundcloud
+from profil3r.modules.forum import zeroxzerozerosec
 from profil3r.modules.programming import github
 from profil3r.colors import Colors
 import threading
@@ -21,13 +22,19 @@ class Core:
         self.items = items
         self.permutations_list = []
         self.modules = {
-            "email":      {"method" : self.email },
-            "facebook":   {"method" : self.facebook},
-            "twitter":    {"method" : self.twitter},
-            "tiktok":     {"method" : self.tiktok},
-            "instagram":  {"method" : self.instagram},
-            "soundcloud": {"method" : self.soundcloud},
-            "github":     {"method" : self.github},
+            # Emails
+            "email":       {"method" : self.email },
+            # Social
+            "facebook":    {"method" : self.facebook},
+            "twitter":     {"method" : self.twitter},
+            "tiktok":      {"method" : self.tiktok},
+            "instagram":   {"method" : self.instagram},
+            # Music
+            "soundcloud":  {"method" : self.soundcloud},
+            # Programming 
+            "github":      {"method" : self.github},
+            # Forums:
+            "0x00sec" :    {"method" : self.zeroxzerozerosec}
         }
 
     # Remove modules that do not exist
@@ -86,6 +93,12 @@ class Core:
         result["github"] = github.Github(self.CONFIG, self.permutations_list).search()
         # print results
         self.print_results("github")
+
+    # 0x00sec
+    def zeroxzerozerosec(self):
+        result["0x00sec"] = zeroxzerozerosec.ZeroxZeroZeroSec(self.CONFIG, self.permutations_list).search() 
+        # print results
+        self.print_results("0x00sec")
 
     def print_results(self, element):
         if element in result:

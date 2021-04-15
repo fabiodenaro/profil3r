@@ -34,6 +34,10 @@ python3 setup.py install
 
 - [x] Github
 
+#### Forum
+
+- [x] 0x00sec.org
+
 ## 📖 Report
 
 A report in JSON format is automatically generated in the `reports` folder
