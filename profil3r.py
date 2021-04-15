@@ -7,15 +7,17 @@ from multiprocessing import Process
 CONFIG = './config.json'
 
 def print_logo():
-    print(Colors.OKGREEN + Colors.BOLD + '''___            ___  _  _  ____     
-| . \ _ _  ___ | | '<_>| |<__ / _ _ 
-|  _/| '_>/ . \| |- | || | <_ \| '_>
-|_|  |_|  \___/|_|  |_||_|<___/|_|  
+    print(Colors.OKGREEN + Colors.BOLD + '''
+    ____             _____ _______     
+   / __ \_________  / __(_) /__  /_____
+  / /_/ / ___/ __ \/ /_/ / / /_ </ ___/
+ / ____/ /  / /_/ / __/ / /___/ / /    
+/_/   /_/   \____/_/ /_/_//____/_/     
+                                       
+''' + Colors.ENDC)
 
-    ''' + Colors.ENDC)
-
-    print("v1.0.8\n")
-    print("You can buy me a coffee at : https://www.buymeacoffee.com/givocefo\n")
+    print(Colors.HEADER + "Version 1.1.0 - Developped by Rog3rSm1th")
+    print("You can buy me a coffee at : https://www.buymeacoffee.com/givocefo\n" + Colors.ENDC)
 
 
 # Start the program

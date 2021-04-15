@@ -172,7 +172,7 @@ class Core:
     def run(self):
         modules = self.get_report_modules()
 
-        print("\n" + Colors.BOLD + "[+] " + Colors.ENDC + "Profil3r will search : \n - {} \nyou can add more services in the config.json file\n".format('\n - '.join(modules)))
+        print("\n" + "Profil3r will search : \n " + Colors.BOLD + "[+] " + Colors.ENDC +  "{} \nyou can add more services in the config.json file\n".format(str('\n ' + Colors.BOLD + "[+] " + Colors.ENDC).join(modules)))
 
         for module in modules:
             thread = threading.Thread(target=self.modules[module]["method"])
