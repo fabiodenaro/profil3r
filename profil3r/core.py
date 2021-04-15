@@ -4,7 +4,7 @@ import json
 from profil3r.modules.email import email
 from profil3r.modules.social import facebook, twitter, tiktok, instagram
 from profil3r.modules.music import soundcloud
-from profil3r.modules.forum import zeroxzerozerosec
+from profil3r.modules.forum import zeroxzerozerosec, jeuxvideo
 from profil3r.modules.programming import github
 from profil3r.colors import Colors
 import threading
@@ -23,18 +23,19 @@ class Core:
         self.permutations_list = []
         self.modules = {
             # Emails
-            "email":       {"method" : self.email },
+            "email":             {"method" : self.email },
             # Social
-            "facebook":    {"method" : self.facebook},
-            "twitter":     {"method" : self.twitter},
-            "tiktok":      {"method" : self.tiktok},
-            "instagram":   {"method" : self.instagram},
+            "facebook":          {"method" : self.facebook},
+            "twitter":           {"method" : self.twitter},
+            "tiktok":            {"method" : self.tiktok},
+            "instagram":         {"method" : self.instagram},
             # Music
-            "soundcloud":  {"method" : self.soundcloud},
+            "soundcloud":        {"method" : self.soundcloud},
             # Programming 
-            "github":      {"method" : self.github},
+            "github":            {"method" : self.github},
             # Forums:
-            "0x00sec" :    {"method" : self.zeroxzerozerosec}
+            "0x00sec" :          {"method" : self.zeroxzerozerosec},
+            "jeuxvideo.com" :        {"method" : self.jeuxvideo}
         }
 
     # Remove modules that do not exist
@@ -99,6 +100,12 @@ class Core:
         result["0x00sec"] = zeroxzerozerosec.ZeroxZeroZeroSec(self.CONFIG, self.permutations_list).search() 
         # print results
         self.print_results("0x00sec")
+
+    # jeuxvideo.com
+    def jeuxvideo(self):
+        result["jeuxvideo.com"] = jeuxvideo.JeuxVideo(self.CONFIG, self.permutations_list).search() 
+        # print results
+        self.print_results("jeuxvideo.com")
 
     def print_results(self, element):
         if element in result:

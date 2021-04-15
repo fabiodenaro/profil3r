@@ -47,6 +47,11 @@
         "0x00sec": {
             "rate_limit": 1000,
             "format": "https://0x00sec.org/u/{permutation}"
+        },
+
+        "jeuxvideo.com": {
+            "rate_limit": 1000,
+            "format": "https://www.jeuxvideo.com/profil/{permutation}?mode=infos"
         }
     }
 }

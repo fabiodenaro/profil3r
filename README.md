@@ -37,6 +37,7 @@ python3 setup.py install
 #### Forum
 
 - [x] 0x00sec.org
+- [x] Jeuxvideo.com
 
 ## 📖 Report
 
