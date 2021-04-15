@@ -52,6 +52,11 @@
         "jeuxvideo.com": {
             "rate_limit": 1000,
             "format": "https://www.jeuxvideo.com/profil/{permutation}?mode=infos"
+        },
+
+        "skype": {
+            "rate_limit": 1000,
+            "format": "{permutation}"
         }
     }
 }
