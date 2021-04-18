@@ -5,7 +5,7 @@ from profil3r.modules.email import email
 from profil3r.modules.social import facebook, twitter, tiktok, instagram
 from profil3r.modules.music import soundcloud
 from profil3r.modules.forum import zeroxzerozerosec, jeuxvideo
-from profil3r.modules.programming import github
+from profil3r.modules.programming import github, pastebin
 from profil3r.modules.tchat import skype
 from profil3r.modules.entertainment import dailymotion
 from profil3r.colors import Colors
@@ -35,6 +35,7 @@ class Core:
             "soundcloud":        {"method" : self.soundcloud},
             # Programming 
             "github":            {"method" : self.github},
+            "pastebin":          {"method" : self.pastebin},
             # Forums:
             "0x00sec":           {"method" : self.zeroxzerozerosec},
             "jeuxvideo.com":     {"method" : self.jeuxvideo},
@@ -124,6 +125,12 @@ class Core:
         result["dailymotion"] = dailymotion.Dailymotion(self.CONFIG, self.permutations_list).search() 
         # print results
         self.print_results("dailymotion")
+
+    # Pastebin
+    def pastebin(self):
+        result["pastebin"] = pastebin.Pastebin(self.CONFIG, self.permutations_list).search() 
+        # print results
+        self.print_results("pastebin")
 
     def print_results(self, element):
         if element in result:

@@ -33,6 +33,7 @@ python3 setup.py install
 #### Programming
 
 - [x] Github
+- [x] Pastebin
 
 #### Forum
 

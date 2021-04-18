@@ -62,6 +62,11 @@
         "dailymotion": {
             "rate_limit": 1000,
             "format": "https://dailymotion.com/{permutation}"
+        },
+
+        "pastebin": {
+            "rate_limit": 1000,
+            "format": "https://pastebin.com/u/{permutation}"
         }
     }
 }
