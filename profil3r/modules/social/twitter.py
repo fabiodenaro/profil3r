@@ -14,12 +14,12 @@ class Twitter:
         # You can find more at https://github.com/zedeus/nitter/wiki/Instances
         self.nitter_URL = [
             "https://nitter.42l.fr/{}",
-            "nitter.pussthecat.org/{}",
-            "nitter.nixnet.services/{}",
-            "nitter.tedomum.net/{}",
-            "nitter.fdn.fr/{}",
-            "nitter.kavin.rocks/{}",
-            "tweet.lambda.dance/{}"
+            "https://nitter.pussthecat.org/{}",
+            "https://nitter.nixnet.services/{}",
+            "https://nitter.tedomum.net/{}",
+            "https://nitter.fdn.fr/{}",
+            "https://nitter.kavin.rocks/{}",
+            "https://tweet.lambda.dance/{}"
         ]
 
     # Generate all potential twitter usernames

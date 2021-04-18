@@ -7,6 +7,7 @@ from profil3r.modules.music import soundcloud
 from profil3r.modules.forum import zeroxzerozerosec, jeuxvideo
 from profil3r.modules.programming import github
 from profil3r.modules.tchat import skype
+from profil3r.modules.entertainment import dailymotion
 from profil3r.colors import Colors
 import threading
 import json
@@ -38,7 +39,9 @@ class Core:
             "0x00sec":           {"method" : self.zeroxzerozerosec},
             "jeuxvideo.com":     {"method" : self.jeuxvideo},
             # Tchat
-            "skype":             {"method" : self.skype}
+            "skype":             {"method" : self.skype},
+            # Entertainment
+            "dailymotion":       {"method" : self.dailymotion}
         }
 
     # Remove modules that do not exist
@@ -115,6 +118,12 @@ class Core:
         result["skype"] = skype.Skype(self.CONFIG, self.permutations_list).search() 
         # print results
         self.print_results("skype")
+    
+    # Dailymotion
+    def dailymotion(self):
+        result["dailymotion"] = dailymotion.Dailymotion(self.CONFIG, self.permutations_list).search() 
+        # print results
+        self.print_results("dailymotion")
 
     def print_results(self, element):
         if element in result:

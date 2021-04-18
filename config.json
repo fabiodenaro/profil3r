@@ -57,6 +57,11 @@
         "skype": {
             "rate_limit": 1000,
             "format": "{permutation}"
+        },
+
+        "dailymotion": {
+            "rate_limit": 1000,
+            "format": "https://dailymotion.com/{permutation}"
         }
     }
 }

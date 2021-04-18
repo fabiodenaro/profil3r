@@ -43,6 +43,10 @@ python3 setup.py install
 
 - [x] Skype
 
+#### Entertainment
+
+- [x] Dailymotion
+
 ## 📖 Report
 
 A report in JSON format is automatically generated in the `reports` folder
