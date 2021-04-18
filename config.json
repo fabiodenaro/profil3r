@@ -1,8 +1,11 @@
-{   
-    "report_elements" : ["email", "facebook", "twitter"],
-
+{
+    "config_path": "./config.json",
+    "report_elements": [
+        "email",
+        "facebook",
+        "twitter"
+    ],
     "report_path": "./reports/{}.json",
-    
     "plateform": {
         "email": {
             "rate_limit": 1500,
@@ -11,62 +14,63 @@
                 "yahoo.com",
                 "hotmail.com"
             ],
-            "format"   : "{permutation}@{domain}"
+            "format": "{permutation}@{domain}",
+            "type": "email"
         },
-
         "facebook": {
             "rate_limit": 1000,
-            "format": "https://facebook.com/{permutation}"
+            "format": "https://facebook.com/{permutation}",
+            "type": "social"
         },
-
         "twitter": {
             "rate_limit": 1000,
-            "format": "https://twitter.com/{permutation}"
+            "format": "https://twitter.com/{permutation}",
+            "type": "social"
         },
-
         "tiktok": {
             "rate_limit": 1000,
-            "format": "https://www.tiktok.com/@{permutation}"
+            "format": "https://www.tiktok.com/@{permutation}",
+            "type": "social"
         },
-
         "instagram": {
             "rate_limit": 1000,
-            "format": "https://instagram.com/{permutation}"
+            "format": "https://instagram.com/{permutation}",
+            "type": "social"
         },
-
         "soundcloud": {
             "rate_limit": 1000,
-            "format": "https://soundcloud.com/{permutation}"
+            "format": "https://soundcloud.com/{permutation}",
+            "type": "music"
         },
-
         "github": {
             "rate_limit": 1000,
-            "format": "https://github.com/{permutation}"
+            "format": "https://github.com/{permutation}",
+            "type": "programming"
         },
-
         "0x00sec": {
             "rate_limit": 1000,
-            "format": "https://0x00sec.org/u/{permutation}"
+            "format": "https://0x00sec.org/u/{permutation}",
+            "type": "forum"
         },
-
         "jeuxvideo.com": {
             "rate_limit": 1000,
-            "format": "https://www.jeuxvideo.com/profil/{permutation}?mode=infos"
+            "format": "https://www.jeuxvideo.com/profil/{permutation}?mode=infos",
+            "type": "forum"
         },
-
         "skype": {
             "rate_limit": 1000,
-            "format": "{permutation}"
+            "format": "{permutation}",
+            "type": "tchat"
         },
-
         "dailymotion": {
             "rate_limit": 1000,
-            "format": "https://dailymotion.com/{permutation}"
+            "format": "https://dailymotion.com/{permutation}",
+            "type": "entertainment"
         },
-
         "pastebin": {
             "rate_limit": 1000,
-            "format": "https://pastebin.com/u/{permutation}"
+            "format": "https://pastebin.com/u/{permutation}",
+            "type": "programming"
         }
     }
 }

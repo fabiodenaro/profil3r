@@ -16,7 +16,7 @@ def print_logo():
                                        
 ''' + Colors.ENDC)
 
-    print(Colors.HEADER + "Version 1.1.1 - Developped by Rog3rSm1th")
+    print(Colors.HEADER + "Version 1.1.3 - Developped by Rog3rSm1th")
     print("You can buy me a coffee at : https://www.buymeacoffee.com/givocefo\n" + Colors.ENDC)
 
 

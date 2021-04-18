@@ -9,6 +9,7 @@ from profil3r.modules.programming import github, pastebin
 from profil3r.modules.tchat import skype
 from profil3r.modules.entertainment import dailymotion
 from profil3r.colors import Colors
+from PyInquirer import prompt, Separator
 import threading
 import json
 import os
@@ -140,7 +141,7 @@ class Core:
 
             # No results
             if not element_results["accounts"]:
-                print("\n" + Colors.BOLD + "└──" + Colors.ENDC + Colors.OKGREEN + " {} ✔️".format(element.upper()) + Colors.ENDC + Colors.FAIL + " (No results)" + Colors.ENDC)
+                print("\n" + Colors.BOLD + "└──" + Colors.ENDC + Colors.OKGREEN + " {} ❌".format(element.upper()) + Colors.ENDC + Colors.FAIL + " (No results)" + Colors.ENDC)
                 return 
             # Results
             else: 
@@ -168,6 +169,55 @@ class Core:
                     else:
                         print(Colors.BOLD + "   ├──" + Colors.ENDC + Colors.HEADER + email + Colors.OKGREEN + "[SAFE]" + Colors.ENDC)
 
+    # Change the "report_elements" array in the config.json file
+    # input is an array, for exemple : ["facebook", "twitter"]
+    def modules_update(self, modules):
+        new_config = self.CONFIG
+        new_config["report_elements"] = modules
+
+        try:
+            with open(self.CONFIG["config_path"], 'w') as fp:
+                json.dump(new_config, fp, indent=4)
+        except Exception as e:
+            print(e)
+
+    # The menu displays a list of checkboxes, which allows the user to select the modules he wants to use
+    def menu(self):
+        # Get a list of all existing modules
+        modules_list = sorted([module for module in self.CONFIG["plateform"]])
+        # Create a list of all existing categories
+        categories = sorted(list(set([content["type"] for module, content in self.CONFIG["plateform"].items()])))
+        
+        menu = [
+            {
+                'type': 'checkbox',
+                'qmark': '⚙️ ',
+                'message': 'Select services',
+                'name': 'modules',
+                'choices': [
+                    
+                ],
+                'validate': lambda answer: 'You must choose at least one service !' \
+                    if len(answer) == 0 else True
+            }
+        ]
+
+        for category in categories:
+            # Category title 
+            menu[0]["choices"].append(Separator(category.upper()))
+            # Append category items
+            for module in modules_list: 
+                if self.CONFIG["plateform"][module]["type"] == category:
+                    menu[0]["choices"].append(
+                        {
+                            'name': module,
+                            # Checked by default
+                            'checked': module in self.CONFIG["report_elements"]
+                        })
+       
+        modules = prompt(menu)["modules"]
+        self.modules_update(modules)
+
     # Generate a report in JSON format containing the collected data
     # Report will be in "./reports/"
     # You can modify th path in the config.json file
@@ -186,9 +236,11 @@ class Core:
         print("\n" + Colors.BOLD + "[+] " + Colors.ENDC + "Report was generated in {}".format(file_name))
 
     def run(self):
+        self.menu()
+
         modules = self.get_report_modules()
 
-        print("\n" + "Profil3r will search : \n " + Colors.BOLD + "[+] " + Colors.ENDC +  "{} \nyou can add more services in the config.json file\n".format(str('\n ' + Colors.BOLD + "[+] " + Colors.ENDC).join(modules)))
+        print("\n" + "Profil3r will search : \n " + Colors.BOLD + "[+] " + Colors.ENDC +  "{} \n".format(str('\n ' + Colors.BOLD + "[+] " + Colors.ENDC).join(modules)))
 
         for module in modules:
             thread = threading.Thread(target=self.modules[module]["method"])
