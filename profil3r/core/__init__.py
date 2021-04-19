@@ -11,7 +11,7 @@ class Core(object):
     from ._modules import modules_update, get_report_modules
     from ._logo import print_logo
     
-    from .services._social import facebook, twitter, instagram, tiktok
+    from .services._social import facebook, twitter, instagram, tiktok, pinterest
     from .services._forum import zeroxzerozerosec, jeuxvideo
     from .services._programming import github, pastebin
     from .services._tchat import skype
@@ -37,6 +37,7 @@ class Core(object):
             "twitter":           {"method" : self.twitter},
             "tiktok":            {"method" : self.tiktok},
             "instagram":         {"method" : self.instagram},
+            "pinterest":         {"method" : self.pinterest},
             # Music
             "soundcloud":        {"method" : self.soundcloud},
             "spotify":           {"method" : self.spotify},

@@ -76,6 +76,11 @@
             "rate_limit": 1000,
             "format": "https://open.spotify.com/user/{permutation}",
             "type": "music"
+        },
+        "pinterest": {
+            "rate_limit": 1000,
+            "format": "https://pinterest.fr/{permutation}",
+            "type": "social"
         }
     }
 }

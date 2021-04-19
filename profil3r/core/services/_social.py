@@ -2,6 +2,7 @@ from profil3r.modules.social.facebook import Facebook
 from profil3r.modules.social.twitter import Twitter
 from profil3r.modules.social.tiktok import TikTok
 from profil3r.modules.social.instagram import Instagram
+from profil3r.modules.social.pinterest import Pinterest
 
 # Facebook
 def facebook(self):
@@ -26,3 +27,9 @@ def instagram(self):
     self.result["instagram"] = Instagram(self.CONFIG, self.permutations_list).search()
     # print results
     self.print_results("instagram")
+
+# Pinterest
+def pinterest(self):
+    self.result["pinterest"] = Pinterest(self.CONFIG, self.permutations_list).search()
+    # print results
+    self.print_results("pinterest")
