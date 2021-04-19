@@ -15,12 +15,12 @@ class Core(object):
     from .services._forum import zeroxzerozerosec, jeuxvideo
     from .services._programming import github, pastebin
     from .services._tchat import skype
-    from .services._music import soundcloud
+    from .services._music import soundcloud, spotify
     from .services._entertainment import dailymotion
     from .services._email import email
 
     def __init__(self, config_path, items):
-        self.version = "1.2.0"
+        self.version = "1.2.1"
 
         with open(config_path, 'r') as f:
             self.CONFIG = json.load(f)
@@ -39,6 +39,7 @@ class Core(object):
             "instagram":         {"method" : self.instagram},
             # Music
             "soundcloud":        {"method" : self.soundcloud},
+            "spotify":           {"method" : self.spotify},
             # Programming 
             "github":            {"method" : self.github},
             "pastebin":          {"method" : self.pastebin},

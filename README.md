@@ -29,6 +29,7 @@ python3 setup.py install
 #### Music
 
 - [x] Soundcloud
+- [x] Spotify
 
 #### Programming
 

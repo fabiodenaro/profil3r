@@ -71,6 +71,11 @@
             "rate_limit": 1000,
             "format": "https://pastebin.com/u/{permutation}",
             "type": "programming"
+        },
+        "spotify": {
+            "rate_limit": 1000,
+            "format": "https://open.spotify.com/user/{permutation}",
+            "type": "music"
         }
     }
 }
