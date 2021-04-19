@@ -1,6 +1,5 @@
 import time
 import pwnedpasswords
-from profil3r.colors import Colors
 
 class Email:
 

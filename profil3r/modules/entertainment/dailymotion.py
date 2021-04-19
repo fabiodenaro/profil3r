@@ -1,5 +1,4 @@
 import requests
-from profil3r.colors import Colors
 import time
 
 class Dailymotion:
