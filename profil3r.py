@@ -1,6 +1,6 @@
 import sys
 from itertools import chain, combinations
-from profil3r import core
+from profil3r.core import Core
 from profil3r.colors import Colors
 from multiprocessing import Process
 
@@ -23,7 +23,7 @@ def print_logo():
 # Start the program
 print_logo()
 
-profil3r = core.Core(CONFIG, sys.argv[1:])
+profil3r = Core(CONFIG, sys.argv[1:])
 profil3r.get_permutations()
 
 # Use command line arguments
