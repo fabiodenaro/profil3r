@@ -25,6 +25,7 @@ python3 setup.py install
 - [x] Facebook
 - [x] Twitter
 - [x] Tiktok
+- [x] Pinterest
 
 #### Music
 
@@ -74,4 +75,4 @@ This project is under the MIT license.
 
 ## Contact 
 
-You can contact me at r0g3r5@protonmail.com or on twitter [@Rog3rSm1th](https://twitter.com/Rog3rSm1th)
+for any remark, suggestion or job offer, you can contact me at r0g3r5@protonmail.com or on twitter [@Rog3rSm1th](https://twitter.com/Rog3rSm1th)
