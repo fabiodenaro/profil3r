@@ -1,5 +1,6 @@
 from profil3r.modules.forum.zeroxzerozerosec import ZeroxZeroZeroSec
 from profil3r.modules.forum.jeuxvideo import JeuxVideo
+from profil3r.modules.forum.hackernews import Hackernews
 
 # 0x00sec
 def zeroxzerozerosec(self):
@@ -12,3 +13,9 @@ def jeuxvideo(self):
     self.result["jeuxvideo.com"] = JeuxVideo(self.CONFIG, self.permutations_list).search() 
     # print results
     self.print_results("jeuxvideo.com")
+
+# Hackernews
+def hackernews(self):
+    self.result["hackernews"] = Hackernews(self.CONFIG, self.permutations_list).search() 
+    # print results
+    self.print_results("hackernews")

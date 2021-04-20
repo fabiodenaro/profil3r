@@ -12,7 +12,7 @@ class Core(object):
     from ._logo import print_logo
     
     from .services._social import facebook, twitter, instagram, tiktok, pinterest
-    from .services._forum import zeroxzerozerosec, jeuxvideo
+    from .services._forum import zeroxzerozerosec, jeuxvideo, hackernews
     from .services._programming import github, pastebin
     from .services._tchat import skype
     from .services._music import soundcloud, spotify
@@ -47,6 +47,7 @@ class Core(object):
             # Forums:
             "0x00sec":           {"method" : self.zeroxzerozerosec},
             "jeuxvideo.com":     {"method" : self.jeuxvideo},
+            "hackernews":        {"method" : self.hackernews},
             # Tchat
             "skype":             {"method" : self.skype},
             # Entertainment

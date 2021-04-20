@@ -41,6 +41,7 @@ python3 setup.py install
 
 - [x] 0x00sec.org
 - [x] Jeuxvideo.com
+- [x] Hackernews
 
 #### Tchat
 

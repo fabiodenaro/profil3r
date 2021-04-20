@@ -81,6 +81,11 @@
             "rate_limit": 1000,
             "format": "https://pinterest.fr/{permutation}",
             "type": "social"
+        },
+        "hackernews": {
+            "rate_limit": 1000,
+            "format": "https://news.ycombinator.com/user?id={permutation}",
+            "type": "forum"
         }
     }
 }
