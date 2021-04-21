@@ -54,6 +54,7 @@ python3 setup.py install
 #### Porn
 
 - [x] PornHub
+- [x] RedTube
 
 ## 📖 Report
 

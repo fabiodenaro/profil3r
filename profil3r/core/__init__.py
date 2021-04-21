@@ -18,10 +18,10 @@ class Core(object):
     from .services._music import soundcloud, spotify
     from .services._entertainment import dailymotion
     from .services._email import email
-    from .services._porn import pornhub
+    from .services._porn import pornhub, redtube
 
     def __init__(self, config_path, items):
-        self.version = "1.2.1"
+        self.version = "1.2.2"
 
         with open(config_path, 'r') as f:
             self.CONFIG = json.load(f)
@@ -54,5 +54,6 @@ class Core(object):
             # Entertainment
             "dailymotion":       {"method" : self.dailymotion},
             # Porn 
-            "pornhub":           {"method" : self.pornhub}
+            "pornhub":           {"method" : self.pornhub},
+            "redtube":           {"method" : self.redtube}
         }

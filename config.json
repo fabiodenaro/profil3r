@@ -89,7 +89,12 @@
         },
         "pornhub": {
             "rate_limit": 1000,
-            "format": "https://fr.pornhub.com/users/{permutation}",
+            "format": "https://pornhub.com/users/{permutation}",
+            "type": "porn"
+        },
+        "redtube": {
+            "rate_limit": 1000,
+            "format": "https://redtube.com/users/{permutation}",
             "type": "porn"
         }
     }
