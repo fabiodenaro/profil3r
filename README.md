@@ -58,6 +58,10 @@ python3 setup.py install
 - [x] PornHub
 - [x] RedTube
 
+#### 💸 Money
+
+- [x] BuyMeACoffee
+
 ## 📖 Report
 
 A report in JSON format is automatically generated in the `reports` folder

@@ -111,6 +111,11 @@
             "rate_limit": 1000,
             "format": "https://linktr.ee/{permutation}",
             "type": "social"
+        },
+        "buymeacoffee": {
+            "rate_limit": 1000,
+            "format": "https://buymeacoffee.com/{permutation}",
+            "type": "money"
         }
     }
 }

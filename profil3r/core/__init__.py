@@ -19,9 +19,10 @@ class Core(object):
     from .services._entertainment import dailymotion
     from .services._email import email
     from .services._porn import pornhub, redtube
+    from .services._money import buymeacoffee
 
     def __init__(self, config_path, items):
-        self.version = "1.2.5"
+        self.version = "1.2.6"
 
         with open(config_path, 'r') as f:
             self.CONFIG = json.load(f)
@@ -58,5 +59,7 @@ class Core(object):
             "dailymotion":       {"method" : self.dailymotion},
             # Porn 
             "pornhub":           {"method" : self.pornhub},
-            "redtube":           {"method" : self.redtube}
+            "redtube":           {"method" : self.redtube},
+            # Money
+            "buymeacoffee":      {"method" : self.buymeacoffee}
         }
