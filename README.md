@@ -65,10 +65,11 @@ A report in JSON format is automatically generated in the `reports` folder
 
 You can modify the report path and the services Profil3r will search in the `config.json` file
 
-| Field            | Type   | Default                            | Description                                                                                         |
+| Field | Type | Default | Description |
 |-----------------|--------|------------------------------------|-----------------------------------------------------------------------------------------------------|
-| report_elements | Array  | `["email", "facebook", "twitter"]` | List of the services for which profil3r will search                                                 |
-| report_path     | String | `"./reports/{}.json"`              | The path of the report's JSON file, this path must include a {} which corresponds to the file name |
+| report_elements | Array | `["email", "facebook", "twitter"]` | List of the services for which profil3r will search |
+| report_path | String | `"./reports/{}.json"` | The path of the report's JSON file, this path must include a {} which corresponds to the file name |
+separators |Object|`{"Dot": ".", "Dash": "-", "Underscore": "_"}`| List of separators to separate items, for example: `john.doe`, `john-doe`, `john_doe`|
 
 ## 📚 Example
 

@@ -1,5 +1,10 @@
 {
     "config_path": "./config.json",
+    "separators": {
+        "Dot": ".",
+        "Dash": "-",
+        "Underscore": "_"
+    },
     "report_elements": [
         "email",
         "facebook",

@@ -21,11 +21,12 @@ class Core(object):
     from .services._porn import pornhub, redtube
 
     def __init__(self, config_path, items):
-        self.version = "1.2.3"
+        self.version = "1.2.4"
 
         with open(config_path, 'r') as f:
             self.CONFIG = json.load(f)
 
+        self.separators = []
         self.result = {}
         # Items passed from the command line
         self.items = items
