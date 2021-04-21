@@ -3,6 +3,7 @@ from profil3r.modules.social.twitter import Twitter
 from profil3r.modules.social.tiktok import TikTok
 from profil3r.modules.social.instagram import Instagram
 from profil3r.modules.social.pinterest import Pinterest
+from profil3r.modules.social.linktree import LinkTree
 
 # Facebook
 def facebook(self):
@@ -33,3 +34,9 @@ def pinterest(self):
     self.result["pinterest"] = Pinterest(self.CONFIG, self.permutations_list).search()
     # print results
     self.print_results("pinterest")
+
+# LinkTree
+def linktree(self):
+    self.result["linktree"] = LinkTree(self.CONFIG, self.permutations_list).search()
+    # print results
+    self.print_results("linktree")

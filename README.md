@@ -26,6 +26,7 @@ python3 setup.py install
 - [x] Twitter
 - [x] Tiktok
 - [x] Pinterest
+- [x] Linktr.ee
 
 #### Music
 

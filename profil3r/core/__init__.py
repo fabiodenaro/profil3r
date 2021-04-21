@@ -11,7 +11,7 @@ class Core(object):
     from ._modules import modules_update, get_report_modules
     from ._logo import print_logo
     
-    from .services._social import facebook, twitter, instagram, tiktok, pinterest
+    from .services._social import facebook, twitter, instagram, tiktok, pinterest, linktree
     from .services._forum import zeroxzerozerosec, jeuxvideo, hackernews
     from .services._programming import github, pastebin, replit
     from .services._tchat import skype
@@ -21,7 +21,7 @@ class Core(object):
     from .services._porn import pornhub, redtube
 
     def __init__(self, config_path, items):
-        self.version = "1.2.4"
+        self.version = "1.2.5"
 
         with open(config_path, 'r') as f:
             self.CONFIG = json.load(f)
@@ -40,6 +40,7 @@ class Core(object):
             "tiktok":            {"method" : self.tiktok},
             "instagram":         {"method" : self.instagram},
             "pinterest":         {"method" : self.pinterest},
+            "linktree":          {"method" : self.linktree},
             # Music
             "soundcloud":        {"method" : self.soundcloud},
             "spotify":           {"method" : self.spotify},
