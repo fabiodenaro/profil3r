@@ -86,6 +86,11 @@
             "rate_limit": 1000,
             "format": "https://news.ycombinator.com/user?id={permutation}",
             "type": "forum"
+        },
+        "pornhub": {
+            "rate_limit": 1000,
+            "format": "https://fr.pornhub.com/users/{permutation}",
+            "type": "porn"
         }
     }
 }

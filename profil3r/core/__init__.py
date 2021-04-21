@@ -18,6 +18,7 @@ class Core(object):
     from .services._music import soundcloud, spotify
     from .services._entertainment import dailymotion
     from .services._email import email
+    from .services._porn import pornhub
 
     def __init__(self, config_path, items):
         self.version = "1.2.1"
@@ -51,5 +52,7 @@ class Core(object):
             # Tchat
             "skype":             {"method" : self.skype},
             # Entertainment
-            "dailymotion":       {"method" : self.dailymotion}
+            "dailymotion":       {"method" : self.dailymotion},
+            # Porn 
+            "pornhub":           {"method" : self.pornhub}
         }

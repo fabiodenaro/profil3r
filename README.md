@@ -51,6 +51,10 @@ python3 setup.py install
 
 - [x] Dailymotion
 
+#### Porn
+
+- [x] PornHub
+
 ## 📖 Report
 
 A report in JSON format is automatically generated in the `reports` folder
