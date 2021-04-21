@@ -4,7 +4,7 @@
 
 Profil3r is an [OSINT](https://en.wikipedia.org/wiki/Open-source_intelligence) tool that allows you to find potential profiles of a person on social networks, as well as their email addresses. This program also alerts you to the presence of a data leak for the found emails.
 
-![](https://i.imgur.com/xK1aDR0.gif)
+![](https://i.imgur.com/hzmfCg0.gif)
 ## 💡 Prerequisite
 [Python 3](https://www.python.org/)
 
@@ -16,11 +16,11 @@ python3 setup.py install
 ```
 ## Features
 
-#### Emails 
+#### ✉️ Emails 
 - [x] Data leaks
 - [x] Emails
 
-#### Social
+#### 🌐 Social
 - [x] Instagram
 - [x] Facebook
 - [x] Twitter
@@ -28,32 +28,32 @@ python3 setup.py install
 - [x] Pinterest
 - [x] Linktr.ee
 
-#### Music
+#### 🎵 Music
 
 - [x] Soundcloud
 - [x] Spotify
 
-#### Programming
+#### ‍💻 Programming
 
 - [x] Github
 - [x] Pastebin
 - [x] Repl.it
 
-#### Forum
+#### 💬 Forum
 
 - [x] 0x00sec.org
 - [x] Jeuxvideo.com
 - [x] Hackernews
 
-#### Tchat
+#### 🗣️ Tchat
 
 - [x] Skype
 
-#### Entertainment
+#### 📺 Entertainment
 
 - [x] Dailymotion
 
-#### Porn
+#### 🚫 Porn
 
 - [x] PornHub
 - [x] RedTube
