@@ -13,7 +13,7 @@ class Core(object):
     
     from .services._social import facebook, twitter, instagram, tiktok, pinterest
     from .services._forum import zeroxzerozerosec, jeuxvideo, hackernews
-    from .services._programming import github, pastebin
+    from .services._programming import github, pastebin, replit
     from .services._tchat import skype
     from .services._music import soundcloud, spotify
     from .services._entertainment import dailymotion
@@ -21,7 +21,7 @@ class Core(object):
     from .services._porn import pornhub, redtube
 
     def __init__(self, config_path, items):
-        self.version = "1.2.2"
+        self.version = "1.2.3"
 
         with open(config_path, 'r') as f:
             self.CONFIG = json.load(f)
@@ -45,6 +45,7 @@ class Core(object):
             # Programming 
             "github":            {"method" : self.github},
             "pastebin":          {"method" : self.pastebin},
+            "replit":            {"method" : self.replit},
             # Forums:
             "0x00sec":           {"method" : self.zeroxzerozerosec},
             "jeuxvideo.com":     {"method" : self.jeuxvideo},

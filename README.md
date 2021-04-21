@@ -36,6 +36,7 @@ python3 setup.py install
 
 - [x] Github
 - [x] Pastebin
+- [x] Repl.it
 
 #### Forum
 

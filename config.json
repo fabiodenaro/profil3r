@@ -96,6 +96,11 @@
             "rate_limit": 1000,
             "format": "https://redtube.com/users/{permutation}",
             "type": "porn"
+        },
+        "replit": {
+            "rate_limit": 1000,
+            "format": "https://replit.com/@{permutation}",
+            "type": "programming"
         }
     }
 }
