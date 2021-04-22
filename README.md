@@ -16,6 +16,9 @@ python3 setup.py install
 ```
 ## Features
 
+#### 📙 Domain
+- [x] TLD (.com, .org, .net, etc...)
+
 #### ✉️ Emails 
 - [x] Data leaks
 - [x] Emails

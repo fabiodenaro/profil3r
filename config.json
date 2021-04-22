@@ -12,6 +12,16 @@
     ],
     "report_path": "./reports/{}.json",
     "plateform": {
+        "domain": {
+            "rate_limit": 100,
+            "format": "http://{permutation}.{domain}",
+            "TLD": [
+                "org",
+                "com",
+                "net"
+            ],
+            "type": "domain"
+        },
         "email": {
             "rate_limit": 1500,
             "domains": [
