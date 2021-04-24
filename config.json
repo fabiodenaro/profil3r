@@ -6,9 +6,7 @@
         "Underscore": "_"
     },
     "report_elements": [
-        "email",
-        "facebook",
-        "twitter"
+        "xvideos"
     ],
     "report_path": "./reports/{}.json",
     "plateform": {
@@ -126,6 +124,11 @@
             "rate_limit": 1000,
             "format": "https://buymeacoffee.com/{permutation}",
             "type": "money"
+        },
+        "xvideos": {
+            "rate_limit": 1000,
+            "format": "https://www.xvideos.com/profiles/{permutation}",
+            "type": "porn"
         }
     }
 }

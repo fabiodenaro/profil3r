@@ -63,6 +63,7 @@ python3 setup.py install
 
 - [x] PornHub
 - [x] RedTube
+- [x] XVideos
 
 #### 💸 Money
 
