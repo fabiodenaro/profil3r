@@ -11,7 +11,7 @@ class Core(object):
     from ._modules import modules_update, get_report_modules
     from ._logo import print_logo
     
-    from .services._social import facebook, twitter, instagram, tiktok, pinterest, linktree
+    from .services._social import facebook, twitter, instagram, tiktok, pinterest, linktree, myspace
     from .services._forum import zeroxzerozerosec, jeuxvideo, hackernews
     from .services._programming import github, pastebin, replit
     from .services._tchat import skype
@@ -23,7 +23,7 @@ class Core(object):
     from .services._domain import domain
 
     def __init__(self, config_path, items):
-        self.version = "1.2.8"
+        self.version = "1.2.9"
 
         with open(config_path, 'r') as f:
             self.CONFIG = json.load(f)
@@ -43,6 +43,7 @@ class Core(object):
             "instagram":         {"method" : self.instagram},
             "pinterest":         {"method" : self.pinterest},
             "linktree":          {"method" : self.linktree},
+            "myspace":           {"method" : self.myspace},
             # Music
             "soundcloud":        {"method" : self.soundcloud},
             "spotify":           {"method" : self.spotify},

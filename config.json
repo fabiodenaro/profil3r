@@ -6,7 +6,9 @@
         "Underscore": "_"
     },
     "report_elements": [
-        "xvideos"
+        "email",
+        "facebook",
+        "twitter"
     ],
     "report_path": "./reports/{}.json",
     "plateform": {
@@ -129,6 +131,11 @@
             "rate_limit": 1000,
             "format": "https://www.xvideos.com/profiles/{permutation}",
             "type": "porn"
+        },
+        "myspace": {
+            "rate_limit": 1000,
+            "format": "https://myspace.com/{permutation}",
+            "type": "social"
         }
     }
 }

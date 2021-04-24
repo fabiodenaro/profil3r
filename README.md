@@ -33,6 +33,7 @@ python3 setup.py install
 - [x] Tiktok
 - [x] Pinterest
 - [x] Linktr.ee
+- [x] MySpace
 
 #### 🎵 Music
 
