@@ -12,7 +12,7 @@ class Core(object):
     from ._logo import print_logo
     
     from .services._social import facebook, twitter, instagram, tiktok, pinterest, linktree, myspace
-    from .services._forum import zeroxzerozerosec, jeuxvideo, hackernews
+    from .services._forum import zeroxzerozerosec, jeuxvideo, hackernews, crackedto
     from .services._programming import github, pastebin, replit
     from .services._tchat import skype
     from .services._music import soundcloud, spotify
@@ -23,7 +23,7 @@ class Core(object):
     from .services._domain import domain
 
     def __init__(self, config_path, items):
-        self.version = "1.2.9"
+        self.version = "1.2.10"
 
         with open(config_path, 'r') as f:
             self.CONFIG = json.load(f)
@@ -55,6 +55,7 @@ class Core(object):
             "0x00sec":           {"method" : self.zeroxzerozerosec},
             "jeuxvideo.com":     {"method" : self.jeuxvideo},
             "hackernews":        {"method" : self.hackernews},
+            "crackedto":         {"method" : self.crackedto},
             # Tchat
             "skype":             {"method" : self.skype},
             # Entertainment

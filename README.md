@@ -45,6 +45,7 @@ python3 setup.py install
 - [x] Github
 - [x] Pastebin
 - [x] Repl.it
+- [x] Cracked.to
 
 #### 💬 Forum
 

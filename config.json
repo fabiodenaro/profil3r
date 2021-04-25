@@ -136,6 +136,11 @@
             "rate_limit": 1000,
             "format": "https://myspace.com/{permutation}",
             "type": "social"
+        },
+        "crackedto": {
+            "rate_limit": 1000,
+            "format": "https://cracked.to/{permutation}",
+            "type": "forum"
         }
     }
 }
