@@ -12,10 +12,19 @@ Profil3r is an [OSINT](https://en.wikipedia.org/wiki/Open-source_intelligence) t
 [Python 3](https://www.python.org/)
 
 ## 🛠️ Installation
+
+Install PyInquirer :
+
+```bash
+pip3 install PyInquirer
+``` 
+
+Install Profil3r :
+
 ```bash
 git clone https://github.com/Rog3rSm1th/Profil3r.git
 cd Profil3r/
-python3 setup.py install
+sudo python3 setup.py install
 ```
 ## Features
 
