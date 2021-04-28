@@ -10,7 +10,9 @@ def generate_report(self):
     if not os.path.exists('reports'):
         os.makedirs('reports')
 
-    file_name = self.CONFIG["report_path"].format("_".join(self.items[:-1]))
+    separators = [value for key, value in self.CONFIG["separators"].items()]
+
+    file_name = self.CONFIG["report_path"].format("_".join([item for item in self.items if item not in separators]))
     try:
         with open(file_name, 'w') as fp:
             json.dump(self.result, fp, indent=2)
