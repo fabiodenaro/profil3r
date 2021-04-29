@@ -35,11 +35,15 @@ def generate_HTML_report(self):
 
     dirname = os.path.dirname(__file__)
     html_content = open(os.path.join(dirname, './ressources/report.tpl')).read()
+    css_content = open(os.path.join(dirname, './ressources/report.css')).read()
+    js_content = open(os.path.join(dirname, './ressources/report.js')).read()
 
     html_report = Template(html_content).render(
         time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         version = self.version,
-        results = self.result.items()
+        results = self.result.items(),
+        style = css_content,
+        script = js_content
     )
 
     file_name = self.CONFIG["html_report_path"].format("_".join([item for item in self.items if item not in separators]))

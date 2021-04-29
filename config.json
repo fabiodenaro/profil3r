@@ -6,9 +6,7 @@
         "Underscore": "_"
     },
     "report_elements": [
-        "email",
-        "facebook",
-        "twitter"
+        "dailymotion"
     ],
     "json_report_path": "./reports/json/{}.json",
     "html_report_path": "./reports/html/{}.html",
