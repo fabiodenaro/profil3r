@@ -9,6 +9,13 @@
   <body>
 
         <div class="card" style="height:800px;">
+            <div class="card title">
+                <div class="card-body">
+                <h3 class="card-title">Profil3r report for <span class="badge badge-success">{{ title }}</span></h3>
+                <p class="card-text"><small class="text-muted">Profiler version {{ version }} - report was generated at {{ time }}</small></p>
+                </div>
+            </div>
+
             <section class="container">
 
                     <input type="search" class="light-table-filter searchbar" data-table="order-table" placeholder="Filter results">
@@ -53,8 +60,6 @@
                     </table>
 
                 </section>
-
-                <span class="footer">Profiler version {{ version }} - report was generated at {{ time }}</span>
 
             </div>
     </body>

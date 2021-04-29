@@ -23,7 +23,7 @@ class Core(object):
     from .services._domain import domain
 
     def __init__(self, config_path, items):
-        self.version = "1.3.0"
+        self.version = "1.3.1"
 
         with open(config_path, 'r') as f:
             self.CONFIG = json.load(f)

@@ -39,6 +39,7 @@ def generate_HTML_report(self):
     js_content = open(os.path.join(dirname, './ressources/report.js')).read()
 
     html_report = Template(html_content).render(
+        title = " ".join(self.items),
         time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         version = self.version,
         results = self.result.items(),

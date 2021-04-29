@@ -3,15 +3,18 @@ body {
     text-align: center;
 }
 
+.title {
+    margin: 5px;
+    padding: 2px;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    border: none;
+    box-shadow: none !important;
+}
+
 a[target="_blank"]::after {
     content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
     margin: 0 3px 0 5px;
-}
-
-.footer {
-    text-align: center;
-    margin: 5px;
-    padding: 5px;
 }
 
 .card {
@@ -53,6 +56,18 @@ a[target="_blank"]::after {
 
 table {
     text-align: left;
+}
+
+.card::-webkit-scrollbar {
+    width: 5px;
+}
+
+.card::-webkit-scrollbar-track {
+    background: #ddd;
+}
+
+.card::-webkit-scrollbar-thumb {
+    background: #666; 
 }
 
 .badge-entertainment {
