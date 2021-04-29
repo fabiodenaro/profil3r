@@ -93,7 +93,9 @@ A report in JSON format is automatically generated in the `reports/json` folder
 
 #### HTML
 
-A report in HTML format is automatically generated in the `reports/html` folder
+A report in HTML format is automatically generated in the `reports/html` folder, you can access it in your webbrowser
+
+![](https://i.imgur.com/6Ts0eL4.gif)
 
 ## ⚙️ The config.json file 
 
