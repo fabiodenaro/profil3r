@@ -10,6 +10,8 @@ class CrackedTo:
         self.format = config['plateform']['crackedto']['format']
         # cracked.to usernames are not case sensitive
         self.permutations_list = permutations_list
+        # forum
+        self.type = config['plateform']['crackedto']['type']
 
     # Generate all potential cracked.to usernames
     def possible_usernames(self):
@@ -23,6 +25,7 @@ class CrackedTo:
 
     def search(self):
         cracked_usernames = {
+            "type": self.type,
             "accounts": []
         }
         possible_usernames_list = self.possible_usernames()

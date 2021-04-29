@@ -9,6 +9,8 @@ class Replit:
         # https://replit.com/@{username}
         self.format = config['plateform']['replit']['format']
         self.permutations_list = permutations_list
+        # programming 
+        self.type = config['plateform']['replit']['type']
 
     # Generate all potential replit usernames
     def possible_usernames(self):
@@ -22,6 +24,7 @@ class Replit:
 
     def search(self):
         replit_usernames = {
+            "type": self.type,
             "accounts": []
         }
         possible_usernames_list = self.possible_usernames()

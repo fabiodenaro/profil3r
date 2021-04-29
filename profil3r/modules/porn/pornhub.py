@@ -10,6 +10,8 @@ class Pornhub:
         self.format = config['plateform']['pornhub']['format']
         # pornhub usernames are not case sensitive
         self.permutations_list = [perm.lower() for perm in permutations_list]
+        # porn
+        self.type = config['plateform']['pornhub']['type']
 
     # Generate all potential pornhub usernames
     def possible_usernames(self):
@@ -23,6 +25,7 @@ class Pornhub:
 
     def search(self):
         pornhub_usernames = {
+            "type": self.type,
             "accounts": []
         }
         possible_usernames_list = self.possible_usernames()

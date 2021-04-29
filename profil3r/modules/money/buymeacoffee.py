@@ -10,6 +10,8 @@ class BuyMeACoffee:
         self.format = config['plateform']['buymeacoffee']['format']
         # buymeacoffee usernames are not case sensitive
         self.permutations_list = [perm.lower() for perm in permutations_list]
+        # money
+        self.type = config['plateform']['buymeacoffee']['type']
 
     # Generate all potential buymeacoffee usernames
     def possible_usernames(self):
@@ -23,6 +25,7 @@ class BuyMeACoffee:
 
     def search(self):
         buymeacoffee_usernames = {
+            "type": self.type,
             "accounts": []
         }
         possible_usernames_list = self.possible_usernames()

@@ -10,6 +10,8 @@ class JeuxVideo:
         self.format = config['plateform']['jeuxvideo.com']['format']
         # jeuxvideo.com usernames are not case sensitive
         self.permutations_list = [perm.lower() for perm in permutations_list]
+        #forum
+        self.type = config['plateform']['jeuxvideo.com']['type']
 
     # Generate all potential 0x00sec usernames
     def possible_usernames(self):
@@ -23,6 +25,7 @@ class JeuxVideo:
 
     def search(self):
         jeuxvideo_usernames = {
+            "type": self.type,
             "accounts": []
         }
         possible_usernames_list = self.possible_usernames()

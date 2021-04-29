@@ -10,6 +10,8 @@ class ZeroxZeroZeroSec:
         self.format = config['plateform']['0x00sec']['format']
         # 0x00sec.org usernames are not case sensitive
         self.permutations_list = [perm.lower() for perm in permutations_list]
+        # forum
+        self.type = config['plateform']['0x00sec']['type']
 
     # Generate all potential 0x00sec usernames
     def possible_usernames(self):
@@ -23,6 +25,7 @@ class ZeroxZeroZeroSec:
 
     def search(self):
         zeroxzerozerosec_usernames = {
+            "type": self.type,
             "accounts": []
         }
         possible_usernames_list = self.possible_usernames()

@@ -10,6 +10,8 @@ class XVideos:
         self.format = config['plateform']['xvideos']['format']
         # xvideos usernames are not case sensitive
         self.permutations_list = [perm.lower() for perm in permutations_list]
+        # xvideos
+        self.type = config['plateform']['xvideos']['type']
 
     # Generate all potential xvideos usernames
     def possible_usernames(self):
@@ -23,6 +25,7 @@ class XVideos:
 
     def search(self):
         xvideos_usernames = {
+            "type": self.type,
             "accounts": []
         }
         possible_usernames_list = self.possible_usernames()

@@ -12,6 +12,8 @@ class Domain:
         self.tld = config['plateform']['domain']['TLD']
         # domains are not case sensitive
         self.permutations_list = [perm.lower() for perm in permutations_list]
+        # domain
+        self.type = config['plateform']['domain']['type']
 
     # Generate all potential domains names
     def possible_domains(self):
@@ -29,6 +31,7 @@ class Domain:
 
     def search(self):
         domains_lists = {
+            "type": self.type,
             "accounts": []
         }
         possible_domains_list = self.possible_domains()

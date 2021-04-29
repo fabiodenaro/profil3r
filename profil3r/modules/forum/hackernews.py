@@ -10,6 +10,8 @@ class Hackernews:
         self.format = config['plateform']['hackernews']['format']
         # hackernews usernames are not case sensitive
         self.permutations_list = permutations_list
+        # forum
+        self.type = config['plateform']['hackernews']['type']
 
     # Generate all potential hackernews usernames
     def possible_usernames(self):
@@ -23,6 +25,7 @@ class Hackernews:
 
     def search(self):
         hackernews_usernames = {
+            "type": self.type,
             "accounts": []
         }
         possible_usernames_list = self.possible_usernames()

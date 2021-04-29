@@ -9,6 +9,8 @@ class Skype:
         # https://www.skypli.com/profile/{}
         self.format = config['plateform']['skype']['format']
         self.permutations_list = permutations_list
+        # tchat
+        self.type = config['plateform']['skype']['type']
 
     # Generate all potential skype usernames
     def possible_usernames(self):
@@ -22,6 +24,7 @@ class Skype:
 
     def search(self):
         skype_usernames = {
+            "type": self.type,
             "accounts" : []
         }
 

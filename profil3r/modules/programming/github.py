@@ -9,6 +9,8 @@ class Github:
         # https://github.com/{username}
         self.format = config['plateform']['github']['format']
         self.permutations_list = permutations_list
+        # programming
+        self.type = config['plateform']['github']['type']
 
     # Generate all potential github usernames
     def possible_usernames(self):
@@ -22,6 +24,7 @@ class Github:
 
     def search(self):
         github_usernames = {
+            "type": self.type,
             "accounts": []
         }
         possible_usernames_list = self.possible_usernames()

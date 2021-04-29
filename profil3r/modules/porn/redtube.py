@@ -10,6 +10,8 @@ class Redtube:
         self.format = config['plateform']['redtube']['format']
         # redtube usernames are not case sensitive
         self.permutations_list = [perm.lower() for perm in permutations_list]
+        # porn
+        self.type = config['plateform']['redtube']['type']
 
     # Generate all potential redtube usernames
     def possible_usernames(self):
@@ -23,6 +25,7 @@ class Redtube:
 
     def search(self):
         redtube_usernames = {
+            "type": self.type,
             "accounts": []
         }
         possible_usernames_list = self.possible_usernames()

@@ -13,6 +13,8 @@ class Email:
         self.format = config['plateform']['email']['format']
         # email adresses are not case sensitive
         self.permutations_list = [perm.lower() for perm in permutations_list]
+        # email
+        self.type = config['plateform']['email']['type']
 
     # Generate all potential adresses
     def possible_emails(self):
@@ -29,6 +31,7 @@ class Email:
     # We use the Have I Been Pwned API to search for breached emails
     def search(self):
         emails_usernames = {
+            "type": self.type,
             "accounts": []
         }
         possible_emails_list = self.possible_emails()

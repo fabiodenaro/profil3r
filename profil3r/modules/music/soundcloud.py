@@ -10,6 +10,8 @@ class Soundcloud:
         self.format = config['plateform']['soundcloud']['format']
         # soundcloud usernames are not case sensitive
         self.permutations_list = [perm.lower() for perm in permutations_list]
+        # music
+        self.type = config['plateform']['soundcloud']['type']
 
     # Generate all potential soundcloud usernames
     def possible_usernames(self):
@@ -23,6 +25,7 @@ class Soundcloud:
 
     def search(self):
         soundcloud_usernames = {
+            "type": self.type,
             "accounts": []
         }
         possible_usernames_list = self.possible_usernames()

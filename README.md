@@ -18,10 +18,10 @@ Profil3r is an [OSINT](https://en.wikipedia.org/wiki/Open-source_intelligence) t
 
 ## 🛠️ Installation
 
-Install PyInquirer :
+Install PyInquirer and jinja2 :
 
 ```bash
-pip3 install PyInquirer
+pip3 install PyInquirer jinja2
 ``` 
 
 Install Profil3r :
@@ -87,16 +87,23 @@ sudo python3 setup.py install
 
 ## 📖 Report
 
-A report in JSON format is automatically generated in the `reports` folder
+#### JSON
+
+A report in JSON format is automatically generated in the `reports/json` folder
+
+#### HTML
+
+A report in HTML format is automatically generated in the `reports/html` folder
 
 ## ⚙️ The config.json file 
 
-You can modify the report path and the services Profil3r will search in the `config.json` file
+You can modify the paths of the reports, the separators and the services Profil3r will search by default in the `config.json` file
 
 | Field | Type | Default | Description |
 |-----------------|--------|------------------------------------|-----------------------------------------------------------------------------------------------------|
 | report_elements | Array | `["email", "facebook", "twitter"]` | List of the services for which profil3r will search |
-| report_path | String | `"./reports/{}.json"` | The path of the report's JSON file, this path must include a {} which corresponds to the file name |
+| json_report_path | String | `"./reports/json/{}.json"` | The path of the report's JSON file, this path must include a {} which corresponds to the file name |
+| html_report_path | String | `"./reports/html/{}.html"` | The path of the report's HTML file, this path must include a {} which corresponds to the file name |
 separators |Object|`{"Dot": ".", "Dash": "-", "Underscore": "_"}`| List of separators to separate items, for example: `john.doe`, `john-doe`, `john_doe`|
 
 ## 📚 Example

@@ -10,6 +10,8 @@ class Pinterest:
         self.format = config['plateform']['pinterest']['format']
         # pinterest usernames are not case sensitive
         self.permutations_list = [perm.lower() for perm in permutations_list]
+        # social
+        self.type = config['plateform']['pinterest']['type']
 
     # Generate all potential pinterest usernames
     def possible_usernames(self):
@@ -23,6 +25,7 @@ class Pinterest:
 
     def search(self):
         pinterest_usernames = {
+            "type": self.type,
             "accounts": []
         }
         possible_usernames_list = self.possible_usernames()

@@ -10,6 +10,8 @@ class Facebook:
         self.format = config['plateform']['facebook']['format']
         # facebook usernames are not case sensitive
         self.permutations_list = [perm.lower() for perm in permutations_list]
+        # social
+        self.type = config['plateform']['facebook']['type']
 
     # Generate all potential facebook usernames
     def possible_usernames(self):
@@ -23,6 +25,7 @@ class Facebook:
 
     def search(self):
         facebook_usernames = {
+            "type": self.type,
             "accounts": []
         }
         possible_usernames_list = self.possible_usernames()

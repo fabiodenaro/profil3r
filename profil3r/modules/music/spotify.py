@@ -10,6 +10,8 @@ class Spotify:
         self.format = config['plateform']['spotify']['format']
         # spotify usernames are not case sensitive
         self.permutations_list = [perm.lower() for perm in permutations_list]
+        # spotify
+        self.type = config['plateform']['spotify']['type']
 
     # Generate all potential spotify usernames
     def possible_usernames(self):
@@ -23,6 +25,7 @@ class Spotify:
 
     def search(self):
         spotify_usernames = {
+            "type": self.type,
             "accounts": []
         }
         possible_usernames_list = self.possible_usernames()

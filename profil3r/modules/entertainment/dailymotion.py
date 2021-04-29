@@ -9,6 +9,8 @@ class Dailymotion:
         # https://dailymotion.com/{username}
         self.format = config['plateform']['dailymotion']['format']
         self.permutations_list = permutations_list
+        # entertainment
+        self.type = config['plateform']['dailymotion']['type']
 
     # Generate all potential dailymotion usernames
     def possible_usernames(self):
@@ -22,6 +24,7 @@ class Dailymotion:
 
     def search(self):
         dailymotion_usernames = {
+            "type": self.type,
             "accounts": []
         }
         possible_usernames_list = self.possible_usernames()

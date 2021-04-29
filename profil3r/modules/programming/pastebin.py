@@ -9,6 +9,8 @@ class Pastebin:
         # https://pastebin.com/u/{username}
         self.format = config['plateform']['pastebin']['format']
         self.permutations_list = permutations_list
+        # programming
+        self.type = config['plateform']['pastebin']['type']
 
     # Generate all potential pastebin usernames
     def possible_usernames(self):
@@ -22,6 +24,7 @@ class Pastebin:
 
     def search(self):
         pastebin_usernames = {
+            "type": self.type,
             "accounts": []
         }
         possible_usernames_list = self.possible_usernames()

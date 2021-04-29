@@ -21,6 +21,9 @@ class Twitter:
             "https://tweet.lambda.dance/{}"
         ]
 
+        #social
+        self.type = config['plateform']['twitter']['type']
+
     # Generate all potential twitter usernames
     def possible_usernames(self):
         possible_usernames = []
@@ -40,6 +43,7 @@ class Twitter:
 
     def search(self):
         twitter_usernames = {
+            "type": self.type,
             "accounts" : []
         }
 

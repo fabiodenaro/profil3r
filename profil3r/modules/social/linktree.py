@@ -10,6 +10,8 @@ class LinkTree:
         self.format = config['plateform']['linktree']['format']
         # linktree usernames are not case sensitive
         self.permutations_list = [perm.lower() for perm in permutations_list]
+        # social
+        self.type = config['plateform']['linktree']['type']
 
     # Generate all potential linktree usernames
     def possible_usernames(self):
@@ -23,6 +25,7 @@ class LinkTree:
 
     def search(self):
         linktree_usernames = {
+            "type": self.type,
             "accounts": []
         }
         possible_usernames_list = self.possible_usernames()

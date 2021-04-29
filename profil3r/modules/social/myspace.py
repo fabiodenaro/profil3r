@@ -9,6 +9,8 @@ class MySpace:
         # https://myspace.com/{username}
         self.format = config['plateform']['myspace']['format']
         self.permutations_list = permutations_list
+        # social
+        self.type = config['plateform']['myspace']['type']
 
     # Generate all potential myspace usernames
     def possible_usernames(self):
@@ -22,6 +24,7 @@ class MySpace:
 
     def search(self):
         myspace_usernames = {
+            "type": self.type,
             "accounts": []
         }
         possible_usernames_list = self.possible_usernames()
