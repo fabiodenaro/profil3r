@@ -50,3 +50,47 @@ a[target="_blank"]::after {
 .searchbar:focus {
     border-bottom:1px solid #ddd;
 }
+
+table {
+    text-align: left;
+}
+
+.badge-entertainment {
+    background-color: #6ab7ff;
+}
+
+.badge-email {
+    background-color: #ffa4a2;
+}
+
+.badge-social {
+    background-color: #98ee99;
+}
+
+.badge-forum {
+    background-color: #efefef;
+}
+
+.badge-porn {
+    background-color: #e53935;
+}
+
+.badge-domain {
+    background-color: #82e9de;
+}
+
+.badge-money {
+    background-color: #6ff9ff;
+}
+
+.badge-music {
+    background-color: #ffa270;
+}
+
+.badge-programming {
+    background-color: #ffe54c;
+}
+
+.badge-tchat {
+    background-color: #df78ef;
+}

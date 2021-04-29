@@ -18,7 +18,7 @@
                             <tr>
                                 <th>Service</th>
                                 <th>Category</th>
-                                <th>Link</th>
+                                <th>Profile</th>
                                 <th>Breached</th>
                             </tr>
                         </thead>
@@ -27,10 +27,10 @@
                             {% for service, accounts in results %}
                                 {% for account in accounts["accounts"] %}
                                 <tr>
-                                    <td>{{ service }}</td>
-                                    <td>{{ accounts["type"] }}</td>
+                                    <td><b>{{ service }}</b></td>
+                                    <td> <span class="badge badge-{{ accounts["type"] }}">{{ accounts["type"] }}</span> </td>
                                     <td>    
-                                        {% if (accounts["type"] == "email") %}
+                                        {% if (accounts["type"] == "email") or (service == "skype")%}
                                         <i>{{ account['value'] }}</i>
                                         {% else %}
                                         <a href="{{ account['value'] }}" target="_blank">{{ account['value'] }}</a> 
