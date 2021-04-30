@@ -142,6 +142,11 @@
             "rate_limit": 1000,
             "format": "https://cracked.to/{permutation}",
             "type": "forum"
+        },
+        "vimeo": {
+            "rate_limit": 1000,
+            "format": "https://vimeo.com/{permutation}",
+            "type": "entertainment"
         }
     }
 }

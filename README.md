@@ -74,6 +74,7 @@ sudo python3 setup.py install
 #### 📺 Entertainment
 
 - [x] Dailymotion
+- [x] Vimeo
 
 #### 🚫 Porn
 

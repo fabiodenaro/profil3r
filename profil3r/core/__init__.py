@@ -16,14 +16,14 @@ class Core(object):
     from .services._programming import github, pastebin, replit
     from .services._tchat import skype
     from .services._music import soundcloud, spotify
-    from .services._entertainment import dailymotion
+    from .services._entertainment import dailymotion, vimeo
     from .services._email import email
     from .services._porn import pornhub, redtube, xvideos
     from .services._money import buymeacoffee
     from .services._domain import domain
 
     def __init__(self, config_path, items):
-        self.version = "1.3.1"
+        self.version = "1.3.2"
 
         with open(config_path, 'r') as f:
             self.CONFIG = json.load(f)
@@ -60,6 +60,7 @@ class Core(object):
             "skype":             {"method" : self.skype},
             # Entertainment
             "dailymotion":       {"method" : self.dailymotion},
+            "vimeo":             {"method" : self.vimeo},   
             # Porn 
             "pornhub":           {"method" : self.pornhub},
             "redtube":           {"method" : self.redtube},
