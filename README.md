@@ -92,6 +92,10 @@ sudo python3 setup.py install
 
 A report in JSON format is automatically generated in the `reports/json` folder
 
+#### CSV
+
+A report in CSV format is automatically generated in the `reports/csv` folder
+
 #### HTML
 
 A report in HTML format is automatically generated in the `reports/html` folder, you can access it in your webbrowser
@@ -107,6 +111,7 @@ You can modify the paths of the reports, the separators and the services Profil3
 | report_elements | Array | `["email", "facebook", "twitter"]` | List of the services for which profil3r will search |
 | json_report_path | String | `"./reports/json/{}.json"` | The path of the report's JSON file, this path must include a {} which corresponds to the file name |
 | html_report_path | String | `"./reports/html/{}.html"` | The path of the report's HTML file, this path must include a {} which corresponds to the file name |
+| csv_report_path | String | `"./reports/csv/{}.csv"` | The path of the report's CSV file, this path must include a {} which corresponds to the file name |
 separators |Object|`{"Dot": ".", "Dash": "-", "Underscore": "_"}`| List of separators to separate items, for example: `john.doe`, `john-doe`, `john_doe`|
 
 ## 📚 Example

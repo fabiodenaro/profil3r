@@ -7,7 +7,7 @@ class Core(object):
     from ._permutations import get_permutations
     from ._results import print_results
     from ._run import run
-    from ._report import generate_report, generate_json_report, generate_HTML_report
+    from ._report import generate_report, generate_json_report, generate_HTML_report, generate_csv_report
     from ._modules import modules_update, get_report_modules
     from ._logo import print_logo
     
@@ -23,7 +23,7 @@ class Core(object):
     from .services._domain import domain
 
     def __init__(self, config_path, items):
-        self.version = "1.3.2"
+        self.version = "1.3.3"
 
         with open(config_path, 'r') as f:
             self.CONFIG = json.load(f)

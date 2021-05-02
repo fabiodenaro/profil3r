@@ -12,6 +12,7 @@
     ],
     "json_report_path": "./reports/json/{}.json",
     "html_report_path": "./reports/html/{}.html",
+    "csv_report_path": "./reports/csv/{}.csv",
     "plateform": {
         "domain": {
             "rate_limit": 100,
