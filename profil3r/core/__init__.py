@@ -10,6 +10,7 @@ class Core(object):
     from ._report import generate_report, generate_json_report, generate_HTML_report, generate_csv_report
     from ._modules import modules_update, get_report_modules
     from ._logo import print_logo
+    from ._argparse import parse_arguments
     
     from .services._social import facebook, twitter, instagram, tiktok, pinterest, linktree, myspace
     from .services._forum import zeroxzerozerosec, jeuxvideo, hackernews, crackedto
@@ -22,16 +23,14 @@ class Core(object):
     from .services._money import buymeacoffee
     from .services._domain import domain
 
-    def __init__(self, config_path, items):
-        self.version = "1.3.3"
+    def __init__(self, config_path):
+        self.version = "1.3.4"
 
         with open(config_path, 'r') as f:
             self.CONFIG = json.load(f)
 
         self.separators = []
         self.result = {}
-        # Items passed from the command line
-        self.items = items
         self.permutations_list = []
         self.modules = {
             # Emails

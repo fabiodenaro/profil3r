@@ -117,7 +117,7 @@ separators |Object|`{"Dot": ".", "Dash": "-", "Underscore": "_"}`| List of separ
 ## 📚 Example
 
 ```bash
-python3 profil3r.py john doe
+python3 profil3r.py -p john doe
 ```
 
 ## 📝 License

@@ -6,4 +6,4 @@ from multiprocessing import Process
 
 CONFIG = './config.json'
 
-profil3r = Core(CONFIG, sys.argv[1:]).run()
+profil3r = Core(CONFIG).run()
