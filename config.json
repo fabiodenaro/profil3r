@@ -45,8 +45,8 @@
             "type": "social"
         },
         "tiktok": {
-            "rate_limit": 1000,
-            "format": "https://www.tiktok.com/@{permutation}",
+            "rate_limit": 1500,
+            "format": "https://www.tiktok.com/@{permutation}?",
             "type": "social"
         },
         "instagram": {
