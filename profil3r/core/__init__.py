@@ -20,11 +20,11 @@ class Core(object):
     from .services._entertainment import dailymotion, vimeo
     from .services._email import email
     from .services._porn import pornhub, redtube, xvideos
-    from .services._money import buymeacoffee
+    from .services._money import buymeacoffee, patreon
     from .services._domain import domain
 
     def __init__(self, config_path):
-        self.version = "1.3.4"
+        self.version = "1.3.5"
 
         with open(config_path, 'r') as f:
             self.CONFIG = json.load(f)
@@ -66,6 +66,7 @@ class Core(object):
             "xvideos":           {"method" : self.xvideos},
             # Money
             "buymeacoffee":      {"method" : self.buymeacoffee},
+            "patreon":           {"method" : self.patreon},
             # Domain
             "domain":            {"method" : self.domain}
         }

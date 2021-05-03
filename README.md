@@ -85,6 +85,7 @@ sudo python3 setup.py install
 #### 💸 Money
 
 - [x] BuyMeACoffee
+- [x] Patreon
 
 ## 📖 Report
 

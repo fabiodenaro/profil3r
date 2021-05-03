@@ -148,6 +148,11 @@
             "rate_limit": 1000,
             "format": "https://vimeo.com/{permutation}",
             "type": "entertainment"
+        },
+        "patreon": {
+            "rate_limit": 1000,
+            "format": "https://www.patreon.com/{permutation}",
+            "type": "money"
         }
     }
 }
