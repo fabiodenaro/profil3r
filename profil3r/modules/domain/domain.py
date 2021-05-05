@@ -36,6 +36,7 @@ class Domain:
         }
         possible_domains_list = self.possible_domains()
 
+        r = None
         for domain in possible_domains_list:
             try:
                 r = requests.head(domain, timeout=5)
@@ -43,8 +44,8 @@ class Domain:
                 pass
 
             # If the domain exists
-            if r.status_code < 400:
-                domains_lists ["accounts"].append({"value": domain})
+            if r is not None and r.status_code < 400:
+                domains_lists["accounts"].append({"value": domain})
             time.sleep(self.delay)
         
         return domains_lists 
